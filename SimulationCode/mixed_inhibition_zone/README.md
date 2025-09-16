@@ -1,21 +1,18 @@
-This folder contains the scripts necessary for analysis of the mixed-inhibition zone model. This model is defined in the manuscript, which can be found in antibiotics-and-diversity/Manuscript/Working_draft/AGV_WorkingDraft.pdf
+This folder contains the scripts necessary for analysis of the mixed-inhibition zone model. 
 
 SCRIPTS:
 
-The folder ``functions`` contains all the functions that are used in this analysis. 
+`get_NRcommunities.m` can be used to get all non-redundant communities with N species and M antibiotics, which can be defined within the script. This will contain communities with repeated rows and columns, these are filtered out in `SearchSpaceOfCommunities.m` below. This is not the most efficient way of doing this, but it works.
 
-get_NRcommunities.m can be used to get all non-redundant communities with N species and M antibiotics, which can be defined within the script.
+`SearchSpaceOfCommunities.m` explores the space of communities found above and saves a .mat file containing the indices (one time for each fixed point found by the solver) in Results/Search-Space/. The communities that these indices correspond to can be found by calling these indices in the appropriate (N,M) file from ./NRcommunities.
 
-SearchSpaceOfCommunities.m explores the space of communities found above and saves a cell array containing the indices (with multiplicity) in the .mat file of communities that contain stable fixed points.
-These results are stored in Results/Search-Space/. The communities that these indices correspond to can be found by calling these indices in the appropriate (N,M) file from ./NRcommunities.
+`heatmap_basin_size.m`: for a given input community and parameters, calculate the size of the basin of attraction for its fixed point (s, if it has more than one) for different cp/cr and cp/cd values.
 
-Rooted_2PSD.m and Rooted_3PSD.m contain analyses of the 2 base communities (see report) when strains evolve capabilities with respect to a new antibiotic, or when new strains are added.
-These results are stored in Results/Extensions/.
+`heatmap_spectralradius.m`: for a given input community and parameters, calculate the spectral radius of the Jacobian evaluated at a fixed point (if it exists) for different cp/cr and cp/cd values.
 
-PSD_KPKD_fate.m and PSD_KPKD_fate_analyse.m analyse the fate of the community that is a PSD motif on 1 antibiotic for a large range of K_P and K_D values. This is done to compare it to the spatial case, where there is nontrivial structure to the behaviour of this community over a similar parameter space. 
-These results are stored in Results/PSD_compare_spatial/.
+`heatmap_spectralradius_KPKD.m`: for a given input community and parameters, calculate the spectral radius of the Jacobian evaluated at a fixed point (if it exists) for different KP and KD values.
 
-EffectOfK_PandK_D.m and EffectOfMetabolicCost.m examine the effects of these parameter on the community {PD, SP, DS}. See main text for an explanation of this notation. 
+`heatmap_final_PSR.m` and `heatmap_final_PSD.m`: calculate the final state of the trajectories for the communities [P,S,R] and [P,S,D] for different cost parameters. 
 
 FOLDERS:
 
@@ -23,6 +20,6 @@ FOLDERS:
 
 ./NRcommunities contains files that store non-redundant lists of communities for a few N,M value pairs.
 
-./Results contains three subfolders - Extensions, SearchSpace, PSD_compare_spatial. 
+./Results contains heatmaps etc. that we use to make the figures.
 
 
