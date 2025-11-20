@@ -1,4 +1,4 @@
-# Antibiotic-mediated interactions and microbial community stability
+# Coexistence rules for small, antagonistically interacting microbial communities
 
 ----
 
