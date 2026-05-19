@@ -1,18 +1,15 @@
-# Antibiotic-mediated interactions and microbial community stability
+# Coexistence rules for small, antagonistically interacting microbial communities
 
 ----
 
-**Abstract.** The immense diversity observed in natural microbial communities is surprising in light of the numerous weapons microbes have evolved to inhibit each other's growth.
-It is thus imperative to understand which interaction patterns can sustain a biodiverse community when individual species antagonistically affect one another.
-In this study, we leverage potent methods from theoretical ecology to show how antibiotic-mediated interactions between microbes drive biological diversity.
-Building on previous experimental and theoretical results, we analyse the dynamics induced by various interaction graphs involving antibiotic production, resistance, and degradation.
-Previous work has recognised the importance of a particular producer-sensitive-degrader (PSD) motif in the interaction graph. 
-We study this motif in detail and elucidate the mechanistic reason for this importance.
-Concretely, we give exact rules for coexistence in some simple cases where exhaustive enumeration of the interaction graphs is feasible.
-More generally, our results suggest that the PSD motif, in combination with a cyclic interaction structure, is sufficient for stable coexistence in well-mixed populations.
-Using individual-based simulations, we then study the importance of the PSD motif in spatially structured populations.
-We show that community coexistence is robust for an extensive range of antibiotic and degrader diffusivities.
-Together, these findings illuminate the interaction patterns that give rise to diversity in complex microbial communities, stressing that antagonism does not imply a lack of diversity and suggesting clear approaches for culturing synthetic microbial consortia.
+**Abstract.** 
+The coexistence of diverse microbial communities despite the common presence of antimicrobial weapons presents a fundamental puzzle in ecology. 
+To address this issue, we investigate the role of antibiotic-mediated interactions in driving microbial diversity using methods from graph theory and theoretical ecology. 
+Our exhaustive analysis of small interaction graphs involving antibiotic production, resistance, and degradation reveals that two factors together determine whether an interaction pattern can support coexistence or not: a certain producer-sensitive-degrader (PSD) motif is critical, and a form of cyclicity between the action of different antibiotics is necessary.
+Using individual-based simulations, we also explore the role of the PSD motif in spatially structured populations and demonstrate that community coexistence is robust over a wide range of antibiotic and degrader diffusivities. 
+Our findings provide a deeper understanding of the interaction patterns that drive diversity in complex microbial communities.
+Specifically, we emphasize how antagonism does not preclude biodiversity. 
+These results offer clear pathways for cultivating synthetic microbial consortia, enabling the design of more effective strategies for manipulating microbial communities.
 
 ----
 
@@ -24,3 +21,6 @@ The structure of the repository is as follows:
 
 ./SimulationCode - scripts for analysis and creation of auxiliary files for figures. This has two subfolders that are explained within.
 
+Each subfolder contains its own README file to help the reader navigate.
+
+----

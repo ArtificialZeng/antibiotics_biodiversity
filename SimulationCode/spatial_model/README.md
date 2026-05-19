@@ -10,19 +10,26 @@ This folder contains an implementation of a spatial model of antibiotic-mediated
 
 usage: eco-dyn.py [-h] -kd K_D -kp K_P [-ss SAVE_SNAPSHOTS] [-sm SAVE_MOVIE] [-v VERBOSE]
 
+usage: HPC_spatialmodel.py [-h] -id COMMUNITY_IDENTIFIER -r RUN -cr C_RES [-cpmult CPMULT] [-cdmult CDMULT] -kd K_D -kp K_P [-v VERBOSE]
+
 Individual-based spatial model of antibitic-mediated interactions.
 
-optional arguments:
-  -h, --help            show this help message and exit.  
-  -kd K_D, --kd K_D     K_D, the diffusivity of degrader molecules.  
-  -kp K_P, --kp K_P     K_P, the diffusitivity of antibiotic molecules.  
-  -ss SAVE_SNAPSHOTS, --ss SAVE_SNAPSHOTS
-                        Binary, do you want to save snapshots after each lattice update? Requires a good amount of memory space.  
-  -sm SAVE_MOVIE, --sm SAVE_MOVIE
-                        Binary, do you want to save snapshots after each lattice update? Requires a good amount of memory space.  
+options:
+  -h, --help            show this help message and exit
+  -id COMMUNITY_IDENTIFIER, --id COMMUNITY_IDENTIFIER
+                        community that you want to simulate, can be either PSD or PSR.
+  -r RUN, --r RUN       run number
+  -cr C_RES, --cr C_RES
+                        cres, the cost of being resistant to the produced antibiotic.
+  -cpmult CPMULT, --cpmult CPMULT
+                        cpmult, production cost c_prod = cpmult * cres.
+  -cdmult CDMULT, --cdmult CDMULT
+                        cdmult, degradation cost c_deg = cdmult * cres.
+  -kd K_D, --kd K_D     K_D, the diffusivity of degrader molecules.
+  -kp K_P, --kp K_P     K_P, the diffusitivity of antibiotic molecules.
   -v VERBOSE, --v VERBOSE
-                        Binary, prints a line stating the number of generations completed after every lattice update. Note that if you are running this simulation on a cluster, the output files will likely take up more
-                        space than expected if this flag is set to true.  
+                        Binary, prints a line stating the number of generations completed after every lattice update. Note that if you are running this simulation on a cluster, the output files will likely take up more space than expected if this flag is set to true. Default False. DO NOT pass an argument on the command line if you want to keep it False.
+
 
 2. `analyse-spatial-model.py` analyses the results of the simulation and outputs a KP-KD plane coloured by the composition of the population at the end of the simulation. More information can be found in the script itself. 
 
