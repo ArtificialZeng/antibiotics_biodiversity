@@ -17,8 +17,8 @@ K_P = 15;     %killing area
 simplex_sampling_size = 200; % number of different initial conditions to supply to solver
 timesteps = 600; % number of timesteps to evolve the system given some initial condition. used later. 
 
-%Given a sequence of N*M phenotypes of the N species with respect to the M
-%antibiotics, generate the matrices P, S, D, R for each community. 
+% Given a sequence of N*M phenotypes of the N species with respect to the M
+% antibiotics, generate the matrices P, S, D, R for each community. 
 
 % % Example: Below are the matrices corresponding to the cyclical interactions in Kelsic et al
 % P = [1 0 0; 0 1 0; 0 0 1];
