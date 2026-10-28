@@ -24,3 +24,6 @@ The structure of the repository is as follows:
 Each subfolder contains its own README file to help the reader navigate.
 
 ----
+## Additional analytical note
+
+[Cyclic-pair necessity in the three-strain full-PSD class](notes/full-psd-cyclicity/README.md) gives a proposed proof and reproducible checks for arbitrary finite channel multiplicities and positive effective growth. It concerns locally asymptotically stable interior fixed points of the well-mixed map; the broader cyclicity conjecture remains unresolved. External author review is pending.
